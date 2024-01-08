@@ -1,0 +1,11 @@
+{
+  "name": "pungfe",
+  "private": true,
+  "author": "pung <fp94214@gmail.com>",
+  "prettier": "@pungfe/prettier-config",
+  "devDependencies": {
+    "@pungfe/prettier-config": "workspace:*",
+    "@pungfe/tsconfig": "workspace:*",
+    "prettier": "^3.1.1"
+  }
+}

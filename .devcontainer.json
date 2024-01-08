@@ -1,0 +1,16 @@
+{
+  "name": "pung-fe",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "mounts": [
+    "source=global-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
+  ],
+  "postCreateCommand": "sudo chown node .pnpm-store",
+  "customizations": {
+    "vscode": {
+      "extensions": ["editorconfig.editorconfig", "esbenp.prettier-vscode"],
+      "settings": {
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

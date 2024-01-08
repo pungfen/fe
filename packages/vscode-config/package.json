@@ -1,0 +1,7 @@
+{
+  "name": "@pungfe/vscode",
+  "author": "pung <fp94214@gmail.com>",
+  "description": "some config for vscode",
+  "version": "0.0.1",
+  "main": "settings.json"
+}

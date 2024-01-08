@@ -1,0 +1,13 @@
+{
+  "name": "@pungfe/tsconfig",
+  "version": "0.0.1",
+  "description": "A base TSConfig for working",
+  "peerDependencies": {
+    "@vue/tsconfig": "*"
+  },
+  "peerDependenciesMeta": {
+    "@vue/tsconfig": {
+      "optional": true
+    }
+  }
+}

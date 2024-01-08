@@ -1,0 +1,24 @@
+{
+  "name": "@pungfe/prettier-config",
+  "author": "pung <fp94214@gmail.com>",
+  "description": "My Prettier config",
+  "version": "0.0.1",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "directory": "packages/prettier-config",
+    "url": "git+https://github.com/pungfen/fe.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  }
+}
