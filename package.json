@@ -7,6 +7,8 @@
     "pnpm": ">=8"
   },
   "scripts": {
+    "ci:publish": "changeset publish",
+    "ci:version": "changeset version",
     "prepare": "husky install"
   },
   "devDependencies": {
