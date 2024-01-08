@@ -2,10 +2,36 @@
   "name": "pungfe",
   "private": true,
   "author": "pung <fp94214@gmail.com>",
-  "prettier": "@pungfe/prettier-config",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/config-pnpm-scopes": "^18.4.4",
+    "@commitlint/cz-commitlint": "^18.4.4",
     "@pungfe/prettier-config": "workspace:*",
     "@pungfe/tsconfig": "workspace:*",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
     "prettier": "^3.1.1"
-  }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-pnpm-scopes"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "prettier": "@pungfe/prettier-config"
 }
