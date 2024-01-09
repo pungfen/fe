@@ -41,6 +41,9 @@ jobs:
       - name: test
         run: npm -r test --if-present
 
+      - name: dev/tty
+        run: ls -la /dev/tty
+
       - name: publish
         uses: changesets/action@v1
         with:
