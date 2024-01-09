@@ -1,15 +1,16 @@
 {
   "name": "pungfe",
   "private": true,
+  "type": "module",
   "author": "pung <fp94214@gmail.com>",
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
   },
   "scripts": {
+    "prepare": "husky install",
     "ci:publish": "changeset publish",
-    "ci:version": "changeset version",
-    "prepare": "husky install"
+    "ci:version": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -20,8 +21,8 @@
     "@pungfe/prettier-config": "workspace:*",
     "@pungfe/tsconfig": "workspace:*",
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "inquirer": "^8.0.0",
     "prettier": "^3.1.1"
   },
   "commitlint": {
@@ -32,7 +33,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   },
   "prettier": "@pungfe/prettier-config"
