@@ -45,12 +45,9 @@ jobs:
         uses: changesets/action@v1
         with:
           commit: 'chore: update versions'
+          title: 'chore: update versions'
           version: pnpm ci:version
           publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
-
-      - name: result
-        if: steps.changesets.outputs.published == 'true'
-        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
