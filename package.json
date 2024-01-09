@@ -8,9 +8,9 @@
     "pnpm": ">=8"
   },
   "scripts": {
-    "prepare": "husky install",
     "ci:publish": "changeset publish",
-    "ci:version": "changeset version"
+    "ci:version": "changeset version",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -22,7 +22,7 @@
     "@pungfe/tsconfig": "workspace:*",
     "commitizen": "^4.3.0",
     "husky": "^8.0.3",
-    "inquirer": "^8.0.0",
+    "inquirer": "^8.2.4",
     "prettier": "^3.1.1"
   },
   "commitlint": {
