@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+env:
+  PNPM_CACHE_FOLDER: .pnpm-store
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🎉 checkout
+        uses: actions/checkout@v3
+
+      - name: 🎉 node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 🎉 pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: 🎉 cache
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+
+      - name: 🎉 install
+        run: pnpm i
+
+      - name: 🎉 test
+        run: pnpm -r test --if-present

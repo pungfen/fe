@@ -6,7 +6,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - 'main'
 
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
@@ -16,36 +16,30 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code repository
+      - name: 🎉 checkout
         uses: actions/checkout@v3
 
-      - name: setup node
+      - name: 🎉 node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
 
-      - name: install pnpm
-        run: npm i pnpm@latest -g
+      - name: 🎉 pnpm
+        uses: pnpm/action-setup@v2
 
-      - name: setup pnpm config
+      - name: 🎉 cache
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
-      - name: install dependencies
-        run: pnpm install
+      - name: 🎉 install
+        run: pnpm i
 
-      - name: build
-        run: pnpm -r build --if-present
-
-      - name: test
-        run: npm -r test --if-present
-
-      - name: publish
+      - name: 🎉 changeset
+        id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm ci:version
-          commit: 'chore: update versions'
-          title: 'chore: update versions'
-          publish: pnpm ci:publish
+          commit: 'chore: update version'
+          version: pnpm run ci:version
+          publish: pnpm run ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
