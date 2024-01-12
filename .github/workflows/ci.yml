@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - '**'
 
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
@@ -29,11 +29,5 @@ jobs:
       - name: 🎉 install
         run: pnpm i
 
-      - name: 🎉 create
-        uses: changesets/action@v1
-        with:
-          commit: 'chore: update version'
-          title: 'chore: update version'
-          version: 'pnpm ci:version'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🎉 test
+        run: pnpm -r test --if-present
