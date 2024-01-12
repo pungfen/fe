@@ -31,5 +31,9 @@ jobs:
 
       - name: 🎉 create
         uses: changesets/action@v1
+        with:
+          commit: 'chore: update version'
+          title: 'chore: update version'
+          version: 'pnpm ci:version'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
