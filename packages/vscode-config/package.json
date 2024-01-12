@@ -1,5 +1,6 @@
 {
   "name": "@pungfe/vscode",
+  "private": true,
   "author": "pung <fp94214@gmail.com>",
   "description": "some config for vscode",
   "version": "0.0.1",
