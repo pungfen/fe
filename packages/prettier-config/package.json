@@ -2,13 +2,18 @@
   "name": "@pungfe/prettier-config",
   "author": "pung <fp94214@gmail.com>",
   "description": "My Prettier config",
+  "license": "MIT",
   "version": "0.0.0",
   "main": "index.json",
   "repository": {
     "type": "git",
-    "directory": "packages/prettier-config",
-    "url": "git+https://github.com/pungfen/fe.git"
+    "url": "git+https://github.com/pungfen/fe.git",
+    "directory": "packages/prettier-config"
   },
+  "bugs": {
+    "url": "https://github.com/pungfen/fe/issues"
+  },
+  "homepage": "https://github.com/pungfen/fe/tree/main/packages/prettier-config#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
