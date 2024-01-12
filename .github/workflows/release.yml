@@ -4,9 +4,7 @@
 name: Release
 
 on:
-  pull_request:
-    branches:
-      - main
+  create:
 
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
@@ -17,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🎉 test
-        run: "echo 'hello world!'"
+        run: 'echo ${{ github.ref }}'
