@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "author": "pung <fp94214@gmail.com>",
+  "license": "MIT",
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
