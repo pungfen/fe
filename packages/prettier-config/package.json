@@ -2,7 +2,7 @@
   "name": "@pungfe/prettier-config",
   "author": "pung <fp94214@gmail.com>",
   "description": "My Prettier config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.json",
   "repository": {
     "type": "git",
