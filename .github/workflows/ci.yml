@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PNPM_CACHE_FOLDER: .pnpm-store
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎉 checkout
+        uses: actions/checkout@v3
+
+      - name: 🎉 node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 🎉 pnpm
+        run: npm i pnpm@latest -g
+
+      - name: 🎉 cache
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+
+      - name: 🎉 install
+        run: pnpm i
+
+      - name: 🎉 create
+        uses: changesets/action@v1
+        with:
+          commit: 'chore: update version'
+          title: 'chore: update version'
+          version: 'pnpm ci:version'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
