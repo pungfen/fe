@@ -25,7 +25,7 @@ jobs:
           node-version: 16
 
       - name: 🎉 pnpm
-        run: npm i pnpm@latest -g
+        uses: pnpm/action-setup@v2
 
       - name: 🎉 cache
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
