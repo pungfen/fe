@@ -36,6 +36,12 @@ jobs:
       - name: 🎉 test
         run: pnpm -r test --if-present
 
+      - name: 🎉 build
+        run: pnpm -r build --if-present
+
+      - name: 🎉 info
+        run: npm info @pungfe/prettier-config
+
       - name: 🎉 changeset
         id: changesets
         uses: changesets/action@v1
