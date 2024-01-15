@@ -2,7 +2,6 @@
   "name": "@pungfe/prettier-config",
   "author": "pung <fp94214@gmail.com>",
   "description": "My Prettier config",
-  "license": "MIT",
   "version": "0.0.1",
   "main": "index.json",
   "repository": {
