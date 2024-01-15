@@ -13,10 +13,6 @@
     "url": "https://github.com/pungfen/fe/issues"
   },
   "homepage": "https://github.com/pungfen/fe/tree/main/packages/prettier-config#readme",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/@pungfe"
-  },
   "peerDependencies": {
     "prettier": "*"
   },
