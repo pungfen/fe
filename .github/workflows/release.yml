@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: 🎉 pnpm
         uses: pnpm/action-setup@v2
@@ -40,7 +40,9 @@ jobs:
         run: pnpm -r build --if-present
 
       - name: 🎉 info
-        run: npm info @pungfe/prettier-config
+        run: npm whoami
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
 
       - name: 🎉 changeset
         id: changesets
