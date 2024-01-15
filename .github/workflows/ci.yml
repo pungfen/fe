@@ -3,14 +3,14 @@ name: CI
 on:
   push:
     branches:
-      - '**'
+      - 'main'
 
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
 
     steps:
       - name: 🎉 checkout
