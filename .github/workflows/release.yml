@@ -4,9 +4,9 @@
 name: Release
 
 on:
-  push:
+  pull_request_commit:
     branches:
-      - 'main'
+      - main
 
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
@@ -14,32 +14,35 @@ env:
 jobs:
   release:
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     steps:
-      - name: 🎉 checkout
-        uses: actions/checkout@v3
+      - name: 🎉 test
+        run: "echo 'pull_request_commit'"
 
-      - name: 🎉 node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      # - name: 🎉 checkout
+      #   uses: actions/checkout@v3
 
-      - name: 🎉 pnpm
-        uses: pnpm/action-setup@v2
+      # - name: 🎉 node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16
 
-      - name: 🎉 cache
-        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+      # - name: 🎉 pnpm
+      #   uses: pnpm/action-setup@v2
 
-      - name: 🎉 install
-        run: pnpm i
+      # - name: 🎉 cache
+      #   run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
-      - name: 🎉 changeset
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          commit: 'chore: update version'
-          version: pnpm run ci:version
-          publish: pnpm run ci:publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
+      # - name: 🎉 install
+      #   run: pnpm i
+
+      # - name: 🎉 changeset
+      #   id: changesets
+      #   uses: changesets/action@v1
+      #   with:
+      #     commit: 'chore: update version'
+      #     version: pnpm run ci:version
+      #     publish: pnpm run ci:publish
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
