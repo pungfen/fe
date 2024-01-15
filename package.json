@@ -3,11 +3,6 @@
   "private": true,
   "type": "module",
   "author": "pung <fp94214@gmail.com>",
-  "license": "MIT",
-  "engines": {
-    "pnpm": ">=8"
-  },
-  "packageManager": "pnpm@latest",
   "scripts": {
     "ci:version": "changeset version",
     "ci:publish": "changeset publish",
