@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: latest
           registry-url: 'https://registry.npmjs.org/'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
 
       - name: 🎉 pnpm
         uses: pnpm/action-setup@v2
@@ -43,6 +45,7 @@ jobs:
         run: npm whoami
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUNGFE }}
 
       - name: 🎉 changeset
         id: changesets
