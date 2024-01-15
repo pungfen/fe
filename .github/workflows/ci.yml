@@ -10,7 +10,7 @@ env:
 
 jobs:
   ci:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: 🎉 checkout
