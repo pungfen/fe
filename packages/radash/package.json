@@ -1,6 +1,6 @@
 {
   "name": "@uceeq/radash",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "src/index.ts",
   "type": "module",
   "devDependencies": {
