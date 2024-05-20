@@ -3,26 +3,36 @@
   "private": true,
   "type": "module",
   "author": "pung <fp94214@gmail.com>",
+  "scripts": {
+    "ci:version": "changeset version",
+    "ci:publish": "changeset publish",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "commitlint": "commitlint --edit",
+    "test": "echo 'test....'"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.2",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/cz-commitlint": "^19.2.0",
     "@commitlint/types": "^19.0.3",
+    "@microsoft/api-documenter": "^7.24.8",
+    "@microsoft/api-extractor": "^7.43.7",
     "@pungfe/prettier-config": "workspace:*",
     "@pungfe/tsconfig": "workspace:*",
+    "@vitest/ui": "^1.6.0",
     "commitizen": "^4.3.0",
+    "esbuild": "^0.21.3",
     "husky": "^9.0.11",
     "inquirer": "9",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "tsx": "^4.10.5",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
   },
   "prettier": "@pungfe/prettier-config",
-  "scripts": {
-    "prepare": "husky",
-    "commitlint": "commitlint --edit",
-    "test": "echo 'test....'",
-    "commit": "git-cz"
-  },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
