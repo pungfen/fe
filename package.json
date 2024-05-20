@@ -1,36 +1,13 @@
 {
-  "name": "pungfe",
+  "name": "uceeq",
   "private": true,
   "type": "module",
   "author": "pung <fp94214@gmail.com>",
-  "scripts": {
-    "ci:version": "changeset version",
-    "ci:publish": "changeset publish",
-    "prepare": "husky install"
-  },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@commitlint/cli": "^18.4.4",
-    "@commitlint/config-conventional": "^18.4.4",
-    "@commitlint/config-pnpm-scopes": "^18.4.4",
-    "@commitlint/cz-commitlint": "^18.4.4",
     "@pungfe/prettier-config": "workspace:*",
     "@pungfe/tsconfig": "workspace:*",
     "commitizen": "^4.3.0",
-    "husky": "^8.0.3",
-    "inquirer": "^8.2.4",
-    "prettier": "^3.1.1"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional",
-      "@commitlint/config-pnpm-scopes"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
+    "prettier": "^3.2.5"
   },
   "prettier": "@pungfe/prettier-config"
 }
