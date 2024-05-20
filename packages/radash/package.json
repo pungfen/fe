@@ -3,10 +3,21 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "type": "module",
+  "author": {
+    "name": "pung",
+    "email": "fp94214@gmail.com"
+  },
   "scripts": {
     "build": "tsx build.ts"
   },
   "devDependencies": {
     "@pungfe/tsconfig": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "files": [
+      "dist"
+    ],
+    "main": "dist/index.js"
   }
 }
