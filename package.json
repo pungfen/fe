@@ -7,17 +7,25 @@
     "@changesets/cli": "^2.27.2",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
     "@commitlint/types": "^19.0.3",
     "@pungfe/prettier-config": "workspace:*",
     "@pungfe/tsconfig": "workspace:*",
     "commitizen": "^4.3.0",
     "husky": "^9.0.11",
+    "inquirer": "9",
     "prettier": "^3.2.5"
   },
   "prettier": "@pungfe/prettier-config",
   "scripts": {
     "prepare": "husky",
     "commitlint": "commitlint --edit",
-    "test": "echo 'test....'"
+    "test": "echo 'test....'",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
